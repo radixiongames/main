@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>Radixion Games | Homepage</title>
+
+    <meta name="description"
+        content="Radixion Games is an indie game studio focused on storytelling, creativity, and immersive gameplay. Based in Turkey, we build meaningful game experiences. / Radixion Games, hikaye anlatımı ve özgün oyun tasarımıyla öne çıkan bir bağımsız oyun stüdyosudur. Türkiye merkezlidir ve oyunculara unutulmaz deneyimler sunar." />
+
+    <meta name="keywords"
+        content="Radixion Games, indie games, indie game studio, story-based games, creative gameplay, PC games, game development, bağımsız oyunlar, oyun stüdyosu, hikaye odaklı oyunlar, yaratıcı oyunlar, Türkiye oyun geliştirme, oyun tasarımı" />
+
+    <meta name="author" content="Radixion Games" />
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
+
+
+    <meta property="og:title" content="Radixion Games | Indie Game Studio" />
+    <meta property="og:description"
+        content="We create story-rich, creative indie games. / Hikaye odaklı ve yaratıcı indie oyunlar geliştiriyoruz." />
+    <meta property="og:image" content="https://radixiongames.com/Images/Logo2560x1440.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://radixiongames.com/" />
+    <meta property="og:site_name" content="Radixion Games" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="tr_TR" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Radixion Games | Indie Game Studio" />
+    <meta name="twitter:description"
+        content="We create story-rich, creative indie games. / Hikaye odaklı ve yaratıcı indie oyunlar geliştiriyoruz." />
+    <meta name="twitter:image" content="https://radixion.com/Images/Logo2560x1440.png" />
+    <meta name="twitter:site" content="@Radixiongames" />
+    <meta name="twitter:creator" content="@Radixiongames" />
+
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
+    <meta name="theme-color" content="#ff3b3b" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Radixion Games" />
+
+    <link rel="icon" type="image/png" href="Images/Logo2560x1440.png" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet" />
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://radixiongames.com/"
+            }
+        ]
+    }
+</script>
+    <style>
+        :root {
+            --bg: #0e1014;
+            --fg: #f5f5f5;
+            --accent: #ff3b3b;
+            --section: #191c22;
+            --muted: #aaaaaa;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: linear-gradient(270deg, #0e0e0e, #180000, #0e0e0e, #180000);
+            background-size: 800% 800%;
+            animation: gradientShift 60s ease infinite;
+            color: var(--fg);
+            line-height: 1.8;
+            opacity: 0.1;
+            transition: opacity 1.8s ease-in-out;
+        }
+
+        @keyframes gradientShift {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        body.fade-in {
+            opacity: 1;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        header {
+            background-color: rgba(25, 28, 34, 0.4);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 80px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        #logo {
+            height: 110px;
+            transition: 0.3s;
+        }
+
+        #logo:hover {
+            filter:
+                drop-shadow(3px 6px 0px rgb(150, 0, 0)) drop-shadow(3px 6px 8px rgb(110, 0, 0));
+        }
+
+        nav {
+            display: flex;
+            gap: 40px;
+        }
+
+        .nav-link {
+            color: var(--fg);
+            font-weight: 700;
+            position: relative;
+            padding-bottom: 6px;
+            font-size: 1.15rem;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0%;
+            height: 3px;
+            background-color: var(--accent);
+            transition: width 0.4s;
+            border-radius: 2px;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .social-links a {
+            color: #bbb;
+            margin-left: 30px;
+            font-size: 1.6rem;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: var(--accent);
+        }
+
+        main {
+            padding-top: 180px;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+
+        section {
+            margin-bottom: 220px;
+        }
+
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+            will-change: opacity, transform;
+        }
+
+        .fade-in-section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        #hero {
+            background: linear-gradient(to right, #191c22, #13161c);
+            border-radius: 28px;
+            padding: 140px 100px;
+            text-align: center;
+        }
+
+        #hero h1 {
+            font-size: 3.8rem;
+            margin-bottom: 40px;
+            letter-spacing: 1.5px;
+            font-weight: 800;
+        }
+
+        .cta-button {
+            background-color: var(--accent);
+            color: #fff;
+            padding: 22px 70px;
+            font-size: 1.4rem;
+            border-radius: 14px;
+            margin-top: 40px;
+            display: inline-block;
+            transition: background-color 0.4s, transform 0.4s, box-shadow 0.4s;
+            cursor: pointer;
+            font-weight: 700;
+            letter-spacing: 0.8px;
+        }
+
+        .cta-button:hover {
+            background-color: #e43232;
+            transform: scale(1.12);
+            box-shadow: 0 14px 30px rgba(255, 59, 59, 0.7);
+        }
+
+        .section-title {
+            font-size: 2.6rem;
+            margin-bottom: 45px;
+            border-left: 8px solid var(--accent);
+            padding-left: 20px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .about p {
+            font-size: 1.4rem;
+            color: var(--muted);
+            max-width: 900px;
+            line-height: 2.3;
+            margin-bottom: 55px;
+            margin-left: auto;
+            margin-right: auto;
+            letter-spacing: 0.3px;
+        }
+
+        .values-list {
+            margin-top: 60px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 55px;
+        }
+
+        .value-box {
+            background: var(--section);
+            padding: 45px 40px;
+            border-radius: 18px;
+            box-shadow: 0 0 25px rgba(255, 59, 59, 0.12);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .value-box:hover {
+            box-shadow: 0 0 40px rgba(255, 59, 59, 0.3);
+        }
+
+        .value-box h4 {
+            color: var(--accent);
+            margin-bottom: 22px;
+            font-size: 1.6rem;
+            font-weight: 700;
+            letter-spacing: 0.4px;
+        }
+
+        .value-box p {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: var(--muted);
+        }
+
+        .process {
+            display: flex;
+            flex-direction: column;
+            gap: 45px;
+            color: var(--muted);
+        }
+
+        .process-step {
+            background: var(--section);
+            padding: 60px 50px;
+            border-left: 6px solid var(--accent);
+            border-radius: 18px;
+            font-size: 1.4rem;
+            line-height: 2.3;
+            font-weight: 500;
+            letter-spacing: 0.3px;
+            box-shadow: 0 0 20px rgba(255, 59, 59, 0.15);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .process-step:hover {
+            box-shadow: 0 0 35px rgba(255, 59, 59, 0.4);
+        }
+
+        .join-us {
+            background: var(--section);
+            padding: 90px 100px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 0 30px rgba(255, 59, 59, 0.18);
+        }
+
+        .join-us h3 {
+            margin-bottom: 50px;
+            font-size: 2.6rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .join-us p {
+            margin-bottom: 60px;
+            font-size: 1.3rem;
+            color: var(--muted);
+            letter-spacing: 0.3px;
+        }
+
+        .join-us a {
+            margin: 0 28px;
+            font-size: 1.9rem;
+            color: var(--accent);
+            transition: transform 0.4s ease, color 0.4s ease, text-shadow 0.4s ease;
+            display: inline-block;
+        }
+
+        .join-us a:hover {
+            transform: scale(1.4);
+            color: #ff6666;
+            text-shadow:
+                0 0 12px #790404,
+                0 0 18px #790404,
+                0 0 30px #790404;
+        }
+
+        #contact p {
+            font-size: 1.4rem;
+            max-width: 680px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 2.2;
+            letter-spacing: 0.3px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            background: #121417;
+            color: #777;
+            font-size: 1rem;
+            letter-spacing: 0.3px;
+        }
+
+        /* ---------------------------------
+        Mobil uyumluluk için geliştirilmiş CSS
+        --------------------------------- */
+        @media (max-width: 1024px) {
+            main {
+                padding-left: 60px;
+                padding-right: 60px;
+                padding-top: 160px;
+            }
+
+            header {
+                padding: 0 40px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 0 20px;
+                height: 60px;
+            }
+
+            #logo {
+                height: 70px;
+                transition: 0.3s;
+            }
+
+            nav {
+                gap: 25px;
+                font-size: 1rem;
+            }
+
+            .nav-link {
+                padding-bottom: 4px;
+                font-size: 1rem;
+            }
+
+            main {
+                padding-left: 20px;
+                padding-right: 20px;
+                padding-top: 130px;
+                max-width: 100%;
+            }
+
+            #hero {
+                padding: 60px 20px;
+                border-radius: 16px;
+            }
+
+            #hero h1 {
+                font-size: 2.4rem;
+                margin-bottom: 30px;
+                letter-spacing: 1px;
+            }
+
+            .cta-button {
+                padding: 18px 50px;
+                font-size: 1.1rem;
+                border-radius: 12px;
+            }
+
+            .values-list {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .value-box {
+                padding: 30px 25px;
+                border-radius: 14px;
+            }
+
+            .process-step {
+                padding: 40px 30px;
+                font-size: 1.2rem;
+                border-radius: 14px;
+            }
+
+            .join-us {
+                padding: 50px 20px;
+                border-radius: 16px;
+            }
+
+            .join-us h3 {
+                font-size: 2rem;
+                margin-bottom: 30px;
+            }
+
+            .join-us p {
+                font-size: 1.1rem;
+                margin-bottom: 40px;
+            }
+
+            .social-links a {
+                font-size: 2rem;
+                margin-left: 20px;
+                transition: transform 0.3s ease;
+            }
+
+            .social-links a:hover {
+                transform: scale(1.3);
+                color: #ff4a4a;
+                text-shadow:
+                    0 0 10px #a60000,
+                    0 0 15px #a60000;
+            }
+
+            #contact p {
+                font-size: 1.25rem;
+                max-width: 100%;
+                padding: 0 10px;
+            }
+
+            footer {
+                padding: 30px 15px;
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                height: 55px;
+            }
+
+            #logo {
+                height: 60px;
+            }
+
+            nav {
+                gap: 15px;
+                font-size: 0.9rem;
+            }
+
+            .nav-link {
+                padding-bottom: 3px;
+                font-size: 0.9rem;
+            }
+
+            #hero {
+                padding: 40px 15px;
+                border-radius: 12px;
+            }
+
+            #hero h1 {
+                font-size: 1.9rem;
+                margin-bottom: 25px;
+            }
+
+            .cta-button {
+                padding: 14px 40px;
+                font-size: 1rem;
+                border-radius: 10px;
+            }
+
+            .values-list {
+                gap: 20px;
+            }
+
+            .value-box {
+                padding: 25px 20px;
+            }
+
+            .process-step {
+                padding: 30px 20px;
+                font-size: 1rem;
+            }
+
+            .join-us {
+                padding: 40px 15px;
+            }
+
+            .join-us h3 {
+                font-size: 1.6rem;
+                margin-bottom: 25px;
+            }
+
+            .join-us p {
+                font-size: 1rem;
+                margin-bottom: 30px;
+            }
+
+            .social-links a {
+                font-size: 1.6rem;
+                margin-left: 15px;
+            }
+
+            #contact p {
+                font-size: 1.1rem;
+                padding: 0 8px;
+            }
+
+            footer {
+                padding: 25px 10px;
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="/homepage/"><img id="logo" src="/Images/Logo2560x1440.png" alt="Radixion Logo" /></a>
+        <nav>
+            <a class="nav-link" href="/games/">Games</a>
+            <a class="nav-link" href="#about">About</a>
+            <a class="nav-link" href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="fade-in-section">
+            <h1>Shaping Worlds, One Game at a Time</h1>
+            <a href="games/" class="cta-button">Explore Our Games</a>
+        </section>
+
+        <section id="about" class="about fade-in-section">
+            <h2 class="section-title">Who We Are</h2>
+            <p>
+                Radixion Games is a forward-thinking indie game studio founded in 2025. We blend storytelling,
+                mechanics, and visual style into meaningful experiences.
+            </p>
+            <div class="values-list">
+                <div class="value-box">
+                    <h4>🎮 Gameplay First</h4>
+                    <p>We craft mechanics that feel satisfying and immersive.</p>
+                </div>
+                <div class="value-box">
+                    <h4>📖 Deep Lore</h4>
+                    <p>Every game has a universe, and we build it with passion.</p>
+                </div>
+                <div class="value-box">
+                    <h4>🌐 Community Driven</h4>
+                    <p>Your feedback shapes our worlds and stories.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="process fade-in-section">
+            <h2 class="section-title">Our Game Development Process</h2>
+            <div class="process-step">1. Concept & Brainstorming: Ideas formed with creativity & player feedback.</div>
+            <div class="process-step">2. Design & Prototype: Rapid iteration to nail gameplay & visuals.</div>
+            <div class="process-step">3. Production: Building the world with art, sound & code.</div>
+            <div class="process-step">4. Testing & Polish: Ensuring quality and fun.</div>
+            <div class="process-step">5. Release & Support: Launching with ongoing updates and community engagement.
+            </div>
+        </section>
+
+        <section class="join-us fade-in-section">
+            <h3>Join the Radixion Community</h3>
+            <p>Follow us on social media and join the conversation about our upcoming releases!</p>
+            <div class="social-links">
+                <a href="https://x.com/radixiongames" target="_blank" rel="noopener" aria-label="Twitter"><i
+                        class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://discord.gg/radixion" target="_blank" rel="noopener" aria-label="Discord"><i
+                        class="fab fa-discord"></i></a>
+                <a href="https://youtube.com/radixion" target="_blank" rel="noopener" aria-label="YouTube"><i
+                        class="fab fa-youtube"></i></a>
+                <a href="https://www.instagram.com/radixiongames/" target="_blank" rel="noopener" aria-label="Instagram"><i
+                        class="fab fa-instagram"></i></a>
+            </div>
+        </section>
+
+        <section id="contact" class="fade-in-section">
+            <h2 class="section-title">Contact Us</h2>
+            <p>For inquiries, collaborations, or just to say hi, reach us at <a href="mailto:contact@radixiongames.com"
+                    style="color: var(--accent);">contact@radixiongames.com</a>.</p>
+        </section>
+    </main>
+
+    <footer>
+        &copy; 2025 Radixion Games. All rights reserved.
+    </footer>
+
+    <script>
+        window.addEventListener('load', () => {
+            document.body.classList.add('fade-in');
+        });
+
+        const faders = document.querySelectorAll('.fade-in-section');
+
+        const appearOptions = {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const appearOnScroll = new IntersectionObserver(function (entries, appearOnScroll) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) {
+                    return;
+                } else {
+                    entry.target.classList.add('visible');
+                    appearOnScroll.unobserve(entry.target);
+                }
+            });
+        }, appearOptions);
+
+        faders.forEach(fader => {
+            appearOnScroll.observe(fader);
+        });
+    </script>
+</body>
+
+</html>
